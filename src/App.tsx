@@ -1,6 +1,6 @@
 import React from 'react';
 import TodoListItem from './component/TodoListItem';
-import { Todo } from './types/type';
+
 
 
 const todos: Array<Todo>=[
@@ -13,6 +13,7 @@ const todos: Array<Todo>=[
   complete:false
 },
 {
+  
   text:'Wash your face',
   complete:true
 },
