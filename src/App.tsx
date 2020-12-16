@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import TodoListItem from './component/TodoListItem';
-
-
+import TodoList from './component/TodoList';
 
 const initialTodos: Array<Todo> = [
   {
@@ -40,11 +38,7 @@ const App: React.FC = () => {
     setTodos(newTodos)
   }
   return <div>
-    {
-      todos.map((todo, index) => {
-        return <TodoListItem todo={todo} key={index} toggleTodo={toggleTodo} />
-      })
-    }
+    <TodoList todos={todos} toggleTodo={toggleTodo} />
   </div>
 }
 export default App
