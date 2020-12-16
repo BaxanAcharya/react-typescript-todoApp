@@ -1,7 +1,9 @@
 import React from 'react';
 import TodoListItem from './component/TodoListItem';
+import { Todo } from './types/type';
 
-const todos=[
+
+const todos: Array<Todo>=[
   {
   text:'Walk the dog',
   complete:true
@@ -20,6 +22,8 @@ const todos=[
 },
 ]
 const App: React.FC=()=>{
-return <div></div>
+return <div>
+  
+</div>
 }
 export default App

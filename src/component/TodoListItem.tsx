@@ -1,10 +1,8 @@
 import React from 'react'
+import { Todo } from '../types/type';
 
 interface TodoListItemProps{
-    todo:{
-        text:string,
-        complete:boolean
-    }
+    todo: Todo
 }
 
 const TodoListItem: React.FC<TodoListItemProps> =({todo})=>{
