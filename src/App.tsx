@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import AddTodoForm from './component/AddTodoFrom';
 import TodoList from './component/TodoList';
 
 const initialTodos: Array<Todo> = [
@@ -37,7 +38,12 @@ const App: React.FC = () => {
 
     setTodos(newTodos)
   }
+
+  const addTodo: AddTodo = newTodo => {
+    newTodo.trim() !== "" && setTodos([...todos, { text: newTodo, complete: false }])
+  }
   return <div>
+    <AddTodoForm addTodo={addTodo} />
     <TodoList todos={todos} toggleTodo={toggleTodo} />
   </div>
 }
